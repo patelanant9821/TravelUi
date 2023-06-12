@@ -47,8 +47,7 @@ class ProfileScreen extends StatelessWidget {
                   children: [
                     SizedBox(height: 90),
                     CircleAvatar(
-                      backgroundImage:
-                          AssetImage('assets/images/jon-snow.jpeg'),
+                      backgroundImage: AssetImage('assets/images/profile.png'),
                       radius: 50,
                     ),
                     SizedBox(height: 5),
@@ -58,8 +57,8 @@ class ProfileScreen extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Text(
-                            'Jon Snow',
-                            style: kScreenTitleStyle.copyWith(fontSize: 20),
+                            'Jon Doe',
+                            style: kScreenTitleStyle.copyWith(fontSize: 25),
                           ),
                           SizedBox(width: 15),
                           InkWell(
