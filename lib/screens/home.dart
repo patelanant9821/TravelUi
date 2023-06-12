@@ -9,17 +9,20 @@ import 'home_page.dart';
 class Home extends StatefulWidget {
   static const String id = 'Home()';
 
+  const Home({Key? key}) : super(key: key);
+
   @override
+  // ignore: library_private_types_in_public_api
   _HomeState createState() => _HomeState();
 }
 
 class _HomeState extends State<Home> {
   int _selectedIndex = 0;
   final List<Widget> _children = [
-    HomePage(),
-    SearchLocationScreen(),
-    WatchListScreen(),
-    ProfileScreen(),
+    const HomePage(),
+    const SearchLocationScreen(),
+    const WatchListScreen(),
+    const ProfileScreen(),
   ];
   void _onItemTapped(int index) {
     setState(() {
@@ -50,10 +53,10 @@ class _HomeState extends State<Home> {
               color: Colors.grey.withOpacity(0.3),
               spreadRadius: 2,
               blurRadius: 15,
-              offset: Offset(0, 5),
+              offset: const Offset(0, 5),
             ),
           ],
-          borderRadius: BorderRadius.only(
+          borderRadius: const BorderRadius.only(
             topLeft: Radius.circular(24),
             topRight: Radius.circular(24),
           ),
@@ -63,25 +66,25 @@ class _HomeState extends State<Home> {
             BottomNavigationBarItem(
               icon: _selectedIndex == 0
                   ? Icon(Icons.home_outlined, color: Colors.blue[900])
-                  : Icon(Icons.home_outlined),
+                  : const Icon(Icons.home_outlined),
               label: 'Home',
             ),
             BottomNavigationBarItem(
               icon: _selectedIndex == 1
                   ? Icon(Icons.search_sharp, color: Colors.blue[900])
-                  : Icon(Icons.search_sharp),
+                  : const Icon(Icons.search_sharp),
               label: 'Search',
             ),
             BottomNavigationBarItem(
               icon: _selectedIndex == 2
                   ? Icon(Icons.favorite_border_sharp, color: Colors.blue[900])
-                  : Icon(Icons.favorite_border_sharp),
+                  : const Icon(Icons.favorite_border_sharp),
               label: 'Favorite',
             ),
             BottomNavigationBarItem(
               icon: _selectedIndex == 3
                   ? Icon(Icons.person_outline, color: Colors.blue[900])
-                  : Icon(Icons.person_outline),
+                  : const Icon(Icons.person_outline),
               label: 'Profile',
             ),
           ],
@@ -94,7 +97,7 @@ class _HomeState extends State<Home> {
           selectedFontSize: 12,
           showUnselectedLabels: true,
           elevation: 0.0,
-          selectedLabelStyle: TextStyle(
+          selectedLabelStyle: const TextStyle(
             fontSize: 13,
             fontWeight: FontWeight.w900,
           ),

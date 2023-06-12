@@ -8,7 +8,10 @@ import 'package:travel_ui/screens/recommended_locations_screen.dart';
 
 class SearchLocationScreen extends StatefulWidget {
   static const String id = 'SearchLocationScreen()';
+
+  const SearchLocationScreen({Key? key}) : super(key: key);
   @override
+  // ignore: library_private_types_in_public_api
   _SearchLocationScreenState createState() => _SearchLocationScreenState();
 }
 
@@ -23,7 +26,7 @@ class _SearchLocationScreenState extends State<SearchLocationScreen> {
           Container(
             width: MediaQuery.of(context).size.width,
             height: MediaQuery.of(context).size.height / 4.3,
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               image: DecorationImage(
                   image: AssetImage('assets/images/profile-background.jpg'),
                   fit: BoxFit.cover),
@@ -35,15 +38,15 @@ class _SearchLocationScreenState extends State<SearchLocationScreen> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 16, vertical: 20),
-                  child: Container(
+                  padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 20),
+                  child: SizedBox(
                     width: MediaQuery.of(context).size.width,
                     child: Container(
                       width: MediaQuery.of(context).size.width,
                       height: 45,
                       decoration: BoxDecoration(
                         color: kBackgroundColor,
-                        boxShadow: [
+                        boxShadow: const [
                           BoxShadow(color: kSubtitleColor, blurRadius: 7),
                         ],
                         borderRadius: BorderRadius.circular(8),
@@ -51,7 +54,7 @@ class _SearchLocationScreenState extends State<SearchLocationScreen> {
                       child: TextField(
                         textInputAction: TextInputAction.next,
                         keyboardType: TextInputType.streetAddress,
-                        style: TextStyle(color: Colors.black87),
+                        style: const TextStyle(color: Colors.black87),
                         onChanged: (value) {
                           location = value;
                         },
@@ -62,7 +65,7 @@ class _SearchLocationScreenState extends State<SearchLocationScreen> {
                 ),
                 Padding(
                   padding:
-                      EdgeInsets.only(left: 16, top: 24, bottom: 12, right: 16),
+                      const EdgeInsets.only(left: 16, top: 24, bottom: 12, right: 16),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -76,14 +79,14 @@ class _SearchLocationScreenState extends State<SearchLocationScreen> {
                               context,
                               MaterialPageRoute(
                                   builder: (context) =>
-                                      RecommendedLocations()));
+                                      const RecommendedLocations()));
                         },
                         clipBehavior: Clip.antiAlias,
                         style: ButtonStyle(
                           foregroundColor: MaterialStateProperty.resolveWith(
                               (states) => kTitleColor),
                         ),
-                        child: Icon(
+                        child: const Icon(
                           FontAwesomeIcons.arrowRight,
                           size: 18,
                         ),
@@ -91,13 +94,13 @@ class _SearchLocationScreenState extends State<SearchLocationScreen> {
                     ],
                   ),
                 ),
-                Container(
+                SizedBox(
                   height: 150,
                   width: MediaQuery.of(context).size.width,
                   child: ListView.builder(
                     itemCount: recommended.length,
                     scrollDirection: Axis.horizontal,
-                    padding: EdgeInsets.only(left: 16, right: 16),
+                    padding: const EdgeInsets.only(left: 16, right: 16),
                     itemBuilder: (context, index) {
                       return Card(
                         elevation: 2.5,

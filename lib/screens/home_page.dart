@@ -11,7 +11,10 @@ import 'package:card_swiper/card_swiper.dart';
 class HomePage extends StatefulWidget {
   static const String id = 'HomePage()';
 
+  const HomePage({Key? key}) : super(key: key);
+
   @override
+  // ignore: library_private_types_in_public_api
   _HomePageState createState() => _HomePageState();
 }
 
@@ -27,13 +30,14 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
+    // ignore: avoid_unnecessary_containers
     return Container(
       child: ListView(
-        physics: ClampingScrollPhysics(),
+        physics: const ClampingScrollPhysics(),
         children: <Widget>[
           // Carousel Section
           Padding(
-            padding: EdgeInsets.only(left: 16, bottom: 10),
+            padding: const EdgeInsets.only(left: 16, bottom: 10),
             child: Text(
               'Promos',
               style: kTitleStyle,
@@ -41,7 +45,7 @@ class _HomePageState extends State<HomePage> {
           ),
           Container(
             alignment: Alignment.centerLeft,
-            margin: EdgeInsets.only(left: 16, right: 16),
+            margin: const EdgeInsets.only(left: 16, right: 16),
             width: MediaQuery.of(context).size.width,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -52,9 +56,10 @@ class _HomePageState extends State<HomePage> {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => OfferScreen(),
+                          builder: (context) => const OfferScreen(),
                         ));
                   },
+                  // ignore: sized_box_for_whitespace
                   child: Container(
                     width: MediaQuery.of(context).size.width,
                     height: 190,
@@ -83,7 +88,7 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ),
                 ),
-                SizedBox(height: 12.0),
+                const SizedBox(height: 12.0),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -93,7 +98,7 @@ class _HomePageState extends State<HomePage> {
                           alignment: Alignment.centerLeft,
                           height: 6,
                           width: 6,
-                          margin: EdgeInsets.only(right: 8),
+                          margin: const EdgeInsets.only(right: 8),
                           decoration: BoxDecoration(
                             shape: BoxShape.circle,
                             color: _currentIndex == index
@@ -108,7 +113,7 @@ class _HomePageState extends State<HomePage> {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => OfferScreen(),
+                              builder: (context) => const OfferScreen(),
                             ));
                       },
                       child: Text(
@@ -123,7 +128,7 @@ class _HomePageState extends State<HomePage> {
           ),
           // Lets Book Section
           Padding(
-            padding: EdgeInsets.only(left: 16, top: 24, bottom: 12),
+            padding: const EdgeInsets.only(left: 16, top: 24, bottom: 12),
             child: Text(
               'Let\'s Book',
               style: kTitleStyle,
@@ -131,15 +136,15 @@ class _HomePageState extends State<HomePage> {
           ),
           Container(
             height: 144,
-            margin: EdgeInsets.only(left: 16, right: 16),
+            margin: const EdgeInsets.only(left: 16, right: 16),
             child: Column(
               children: [
                 Row(
                   children: [
                     Expanded(
                       child: Container(
-                        margin: EdgeInsets.only(right: 8),
-                        padding: EdgeInsets.only(left: 16),
+                        margin: const EdgeInsets.only(right: 8),
+                        padding: const EdgeInsets.only(left: 16),
                         height: 64,
                         decoration: BoxDecoration(
                           color: kFillColor,
@@ -148,13 +153,13 @@ class _HomePageState extends State<HomePage> {
                         ),
                         child: Row(
                           children: [
-                            Icon(
+                            const Icon(
                               Icons.flight,
                               color: kBlueColor,
                               size: 28,
                             ),
                             Padding(
-                              padding: EdgeInsets.only(left: 16),
+                              padding: const EdgeInsets.only(left: 16),
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 mainAxisAlignment: MainAxisAlignment.center,
@@ -176,8 +181,8 @@ class _HomePageState extends State<HomePage> {
                     ),
                     Expanded(
                       child: Container(
-                        margin: EdgeInsets.only(right: 8),
-                        padding: EdgeInsets.only(left: 16),
+                        margin: const EdgeInsets.only(right: 8),
+                        padding: const EdgeInsets.only(left: 16),
                         height: 64,
                         decoration: BoxDecoration(
                           color: kFillColor,
@@ -186,13 +191,13 @@ class _HomePageState extends State<HomePage> {
                         ),
                         child: Row(
                           children: [
-                            Icon(
+                            const Icon(
                               Icons.train_outlined,
                               color: kBlueColor,
                               size: 28,
                             ),
                             Padding(
-                              padding: EdgeInsets.only(left: 16),
+                              padding: const EdgeInsets.only(left: 16),
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 mainAxisAlignment: MainAxisAlignment.center,
@@ -214,15 +219,15 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ],
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 8,
                 ),
                 Row(
                   children: [
                     Expanded(
                       child: Container(
-                        margin: EdgeInsets.only(right: 8),
-                        padding: EdgeInsets.only(left: 16),
+                        margin: const EdgeInsets.only(right: 8),
+                        padding: const EdgeInsets.only(left: 16),
                         height: 64,
                         decoration: BoxDecoration(
                           color: kFillColor,
@@ -231,13 +236,13 @@ class _HomePageState extends State<HomePage> {
                         ),
                         child: Row(
                           children: [
-                            Icon(
+                            const Icon(
                               Icons.hotel_outlined,
                               color: kBlueColor,
                               size: 28,
                             ),
                             Padding(
-                              padding: EdgeInsets.only(left: 16),
+                              padding: const EdgeInsets.only(left: 16),
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 mainAxisAlignment: MainAxisAlignment.center,
@@ -259,8 +264,8 @@ class _HomePageState extends State<HomePage> {
                     ),
                     Expanded(
                       child: Container(
-                        margin: EdgeInsets.only(right: 8),
-                        padding: EdgeInsets.only(left: 16),
+                        margin: const EdgeInsets.only(right: 8),
+                        padding: const EdgeInsets.only(left: 16),
                         height: 64,
                         decoration: BoxDecoration(
                           color: kFillColor,
@@ -269,13 +274,13 @@ class _HomePageState extends State<HomePage> {
                         ),
                         child: Row(
                           children: [
-                            Icon(
+                            const Icon(
                               Icons.car_rental,
                               color: kBlueColor,
                               size: 28,
                             ),
                             Padding(
-                              padding: EdgeInsets.only(left: 16),
+                              padding: const EdgeInsets.only(left: 16),
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 mainAxisAlignment: MainAxisAlignment.center,
@@ -302,20 +307,21 @@ class _HomePageState extends State<HomePage> {
           ),
           // Popular Destination Section
           Padding(
-            padding: EdgeInsets.only(left: 16, top: 24, bottom: 12),
+            padding: const EdgeInsets.only(left: 16, top: 24, bottom: 12),
             child: Text(
               'Popular Destination',
               style: kTitleStyle,
             ),
           ),
 
+          // ignore: sized_box_for_whitespace
           Container(
             height: 120,
             width: MediaQuery.of(context).size.width,
             child: ListView.builder(
               itemCount: populars.length,
               scrollDirection: Axis.horizontal,
-              padding: EdgeInsets.only(left: 16, right: 16),
+              padding: const EdgeInsets.only(left: 16, right: 16),
               itemBuilder: (context, index) {
                 return Card(
                   elevation: 2.5,
@@ -338,7 +344,7 @@ class _HomePageState extends State<HomePage> {
                               image: AssetImage(populars[index].image),
                               fit: BoxFit.cover,
                             ),
-                            borderRadius: BorderRadius.only(
+                            borderRadius: const BorderRadius.only(
                               topRight: Radius.circular(12),
                               topLeft: Radius.circular(12),
                             ),
@@ -362,21 +368,21 @@ class _HomePageState extends State<HomePage> {
           ),
 
           Padding(
-            padding: EdgeInsets.only(left: 16, top: 24, bottom: 12),
+            padding: const EdgeInsets.only(left: 16, top: 24, bottom: 12),
             child: Text(
               'Travelogue !',
               style: kTitleStyle,
             ),
           ),
-          Container(
+          SizedBox(
             height: 181,
             child: ListView.builder(
-              padding: EdgeInsets.only(left: 16),
+              padding: const EdgeInsets.only(left: 16),
               itemCount: traveloguesData.length,
               scrollDirection: Axis.horizontal,
               itemBuilder: (context, index) {
                 return Container(
-                  margin: EdgeInsets.only(right: 16.0),
+                  margin: const EdgeInsets.only(right: 16.0),
                   width: 220,
                   child: Column(
                     children: [
@@ -392,25 +398,25 @@ class _HomePageState extends State<HomePage> {
                             ),
                           ),
                           Positioned(
-                            child: SvgPicture.asset(
-                              'assets/svg/imageTag.svg',
-                              colorFilter: ColorFilter.mode(
-                                  kBackgroundColor, BlendMode.clear),
-                              // color: kBackgroundColor,
-                            ),
                             top: 0,
                             right: 0,
                             height: 30,
                             width: 60,
+                            child: SvgPicture.asset(
+                              'assets/svg/imageTag.svg',
+                              colorFilter: const ColorFilter.mode(
+                                  kBackgroundColor, BlendMode.clear),
+                              // color: kBackgroundColor,
+                            ),
                           ),
                           Positioned(
+                            right: 4,
+                            top: 8,
                             child: SvgPicture.asset(
                               'assets/svg/TravelLogoTag.svg',
                               height: 11,
                               width: 13,
                             ),
-                            right: 4,
-                            top: 8,
                             // height: 10,
                             // width: 20,
                           ),
@@ -418,13 +424,13 @@ class _HomePageState extends State<HomePage> {
                             bottom: 2,
                             left: 32,
                             child: Text(
-                              'Travelogue ' + travelogues[index].name,
+                              'Travelogue ${travelogues[index].name}',
                               style: kTravelLogTitleStyle,
                             ),
                           ),
                         ],
                       ),
-                      SizedBox(height: 7.0),
+                      const SizedBox(height: 7.0),
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [

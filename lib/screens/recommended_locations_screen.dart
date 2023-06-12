@@ -8,12 +8,14 @@ import 'package:travel_ui/screens/search_location_screen.dart';
 
 class RecommendedLocations extends StatefulWidget {
   static const String id = 'RecommendedLocations()';
+
+  const RecommendedLocations({Key? key}) : super(key: key);
   @override
+  // ignore: library_private_types_in_public_api
   _RecommendedLocationsState createState() => _RecommendedLocationsState();
 }
 
 class _RecommendedLocationsState extends State<RecommendedLocations> {
-
   List savedWidget = [];
 
   @override
@@ -26,9 +28,9 @@ class _RecommendedLocationsState extends State<RecommendedLocations> {
             Navigator.pop(
                 context,
                 MaterialPageRoute(
-                    builder: (context) => SearchLocationScreen()));
+                    builder: (context) => const SearchLocationScreen()));
           },
-          child: Icon(
+          child: const Icon(
             FontAwesomeIcons.chevronLeft,
             color: Colors.black,
             size: 18,
@@ -42,11 +44,13 @@ class _RecommendedLocationsState extends State<RecommendedLocations> {
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.only(top: 8.0),
+          // ignore: avoid_unnecessary_containers
           child: Container(
             child: SizedBox(
               height: MediaQuery.of(context).size.longestSide,
               child: ListView.separated(
-                separatorBuilder: (BuildContext context, int index) => Divider(
+                separatorBuilder: (BuildContext context, int index) =>
+                    const Divider(
                   height: 0,
                   thickness: 0,
                 ),
@@ -54,7 +58,7 @@ class _RecommendedLocationsState extends State<RecommendedLocations> {
                 itemBuilder: (context, index) {
                   var save = recommended[index];
                   bool isSaved = savedWidget.contains(save);
-                  
+
                   return Padding(
                     padding:
                         const EdgeInsets.symmetric(horizontal: 16, vertical: 5),
@@ -65,9 +69,10 @@ class _RecommendedLocationsState extends State<RecommendedLocations> {
                         borderRadius: BorderRadius.circular(12),
                       ),
                       child: ExpansionTile(
-                        childrenPadding: EdgeInsets.symmetric(horizontal: 12),
-                        tilePadding:
-                            EdgeInsets.symmetric(horizontal: 12, vertical: 5),
+                        childrenPadding:
+                            const EdgeInsets.symmetric(horizontal: 12),
+                        tilePadding: const EdgeInsets.symmetric(
+                            horizontal: 12, vertical: 5),
                         leading: Container(
                           width: 98,
                           alignment: AlignmentDirectional.centerStart,
@@ -78,11 +83,11 @@ class _RecommendedLocationsState extends State<RecommendedLocations> {
                               )),
                         ),
                         title: Text(
-                          '${recommended[index].name}',
+                          recommended[index].name,
                           style: kTitleStyle.copyWith(color: kBlueColor),
                         ),
                         subtitle: Text(
-                          '${recommended[index].state}',
+                          recommended[index].state,
                           style: kServiceSubtitleStyle,
                         ),
                         children: [
@@ -90,11 +95,11 @@ class _RecommendedLocationsState extends State<RecommendedLocations> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
-                                '${recommended[index].description}',
+                                recommended[index].description,
                                 style: kTravelLogContentStyle.copyWith(
                                     fontSize: 12),
                               ),
-                              SizedBox(height: 14),
+                              const SizedBox(height: 14),
                               Row(
                                 children: [
                                   Text(
@@ -105,7 +110,7 @@ class _RecommendedLocationsState extends State<RecommendedLocations> {
                                     ),
                                   ),
                                   Text(
-                                    '${recommended[index].bestTimeToVisit}',
+                                    recommended[index].bestTimeToVisit,
                                     style: GoogleFonts.roboto(
                                         fontSize: 13,
                                         color: Colors.grey[850],
@@ -113,7 +118,7 @@ class _RecommendedLocationsState extends State<RecommendedLocations> {
                                   ),
                                 ],
                               ),
-                              SizedBox(height: 8),
+                              const SizedBox(height: 8),
                               Row(
                                 children: [
                                   Text(
@@ -124,7 +129,7 @@ class _RecommendedLocationsState extends State<RecommendedLocations> {
                                     ),
                                   ),
                                   Text(
-                                    '${recommended[index].packageDuration}',
+                                    recommended[index].packageDuration,
                                     style: GoogleFonts.roboto(
                                         fontSize: 13,
                                         color: Colors.grey[850],
@@ -132,29 +137,30 @@ class _RecommendedLocationsState extends State<RecommendedLocations> {
                                   ),
                                 ],
                               ),
-                              SizedBox(height: 12),
-                              Divider(
+                              const SizedBox(height: 12),
+                              const Divider(
                                 height: 1,
                                 thickness: 1,
                                 indent: 10,
                                 endIndent: 10,
                               ),
-                              SizedBox(height: 10),
+                              const SizedBox(height: 10),
                               Row(
                                 mainAxisAlignment:
                                     MainAxisAlignment.spaceBetween,
                                 children: [
                                   Container(
-                                    padding: EdgeInsets.all(5),
-                                    width: MediaQuery.of(context).size.width/2.8,
+                                    padding: const EdgeInsets.all(5),
+                                    width:
+                                        MediaQuery.of(context).size.width / 2.8,
                                     decoration: BoxDecoration(
-                                      boxShadow: [
+                                      boxShadow: const [
                                         BoxShadow(
                                             color: kSubtitleColor,
                                             blurRadius: 1),
                                       ],
                                       borderRadius: BorderRadius.circular(6),
-                                      gradient: LinearGradient(
+                                      gradient: const LinearGradient(
                                         colors: [
                                           Color(0xFF46B7FE),
                                           Color(0xFF47A6FF),
@@ -165,7 +171,7 @@ class _RecommendedLocationsState extends State<RecommendedLocations> {
                                     ),
                                     child: Center(
                                       child: Text(
-                                        '${recommended[index].package}',
+                                        recommended[index].package,
                                         style: GoogleFonts.roboto(
                                             fontSize: 28,
                                             color: Colors.white,
@@ -174,25 +180,26 @@ class _RecommendedLocationsState extends State<RecommendedLocations> {
                                     ),
                                   ),
                                   InkWell(
-                                    onTap: (){
+                                    onTap: () {
                                       setState(() {
-                                        if(isSaved) {
+                                        if (isSaved) {
                                           savedWidget.remove(save);
-                                          print(savedWidget.length);
                                         } else {
                                           savedWidget.add(save);
                                         }
                                       });
                                     },
                                     child: Icon(
-                                      isSaved ? FontAwesomeIcons.solidBookmark : FontAwesomeIcons.bookmark,
+                                      isSaved
+                                          ? FontAwesomeIcons.solidBookmark
+                                          : FontAwesomeIcons.bookmark,
                                       size: 25,
                                       color: isSaved ? Colors.black : null,
                                     ),
                                   ),
                                 ],
                               ),
-                              SizedBox(height: 10),
+                              const SizedBox(height: 10),
                             ],
                           ),
                         ],

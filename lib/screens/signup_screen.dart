@@ -7,7 +7,10 @@ import 'package:travel_ui/screens/login_screen.dart';
 class SignupScreen extends StatefulWidget {
   static const String id = 'SignupScreen()';
 
+  const SignupScreen({Key? key}) : super(key: key);
+
   @override
+  // ignore: library_private_types_in_public_api
   _SignupScreenState createState() => _SignupScreenState();
 }
 
@@ -18,7 +21,7 @@ class _SignupScreenState extends State<SignupScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SingleChildScrollView(
-        physics: NeverScrollableScrollPhysics(),
+        physics: const NeverScrollableScrollPhysics(),
         child: Stack(
           children: [
             Stack(
@@ -31,7 +34,7 @@ class _SignupScreenState extends State<SignupScreen> {
                 Positioned(
                   child: Container(
                     height: MediaQuery.of(context).size.height / 1.4,
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                       boxShadow: [
                         BoxShadow(
                           color: Colors.grey,
@@ -63,7 +66,7 @@ class _SignupScreenState extends State<SignupScreen> {
                                 fontWeight: FontWeight.w700,
                                 fontSize: 36),
                           ),
-                          SizedBox(height: 30),
+                          const SizedBox(height: 30),
                           TextField(
                             style: GoogleFonts.josefinSans(
                               letterSpacing: 1.0,
@@ -77,7 +80,7 @@ class _SignupScreenState extends State<SignupScreen> {
                             keyboardType: TextInputType.name,
                             textInputAction: TextInputAction.next,
                           ),
-                          SizedBox(height: 28),
+                          const SizedBox(height: 28),
                           TextField(
                             style: GoogleFonts.josefinSans(
                               letterSpacing: 1.0,
@@ -91,7 +94,7 @@ class _SignupScreenState extends State<SignupScreen> {
                             keyboardType: TextInputType.emailAddress,
                             textInputAction: TextInputAction.next,
                           ),
-                          SizedBox(height: 28),
+                          const SizedBox(height: 28),
                           TextField(
                             style: GoogleFonts.josefinSans(
                               letterSpacing: 1.0,
@@ -104,7 +107,7 @@ class _SignupScreenState extends State<SignupScreen> {
                             keyboardType: TextInputType.phone,
                             textInputAction: TextInputAction.next,
                           ),
-                          SizedBox(height: 28),
+                          const SizedBox(height: 28),
                           TextField(
                             style: GoogleFonts.josefinSans(
                               letterSpacing: 1.0,
@@ -119,20 +122,20 @@ class _SignupScreenState extends State<SignupScreen> {
                             obscureText: true,
                             autocorrect: false,
                           ),
-                          SizedBox(height: 5),
+                          const SizedBox(height: 5),
                           Row(
                             children: [
                               Checkbox(
-                                checkColor: Color(0xFF4B74FF),
+                                checkColor: const Color(0xFF4B74FF),
                                 activeColor: kBackgroundColor,
                                 focusColor: kBackgroundColor,
                                 hoverColor: kBackgroundColor,
                                 fillColor:
                                     MaterialStateProperty.all(kBackgroundColor),
-                                value: this.isChecked,
+                                value: isChecked,
                                 onChanged: (value) {
                                   setState(() {
-                                    this.isChecked = value as bool;
+                                    isChecked = value as bool;
                                   });
                                 },
                               ),
@@ -153,12 +156,12 @@ class _SignupScreenState extends State<SignupScreen> {
                               ),
                             ],
                           ),
-                          SizedBox(height: 18),
+                          const SizedBox(height: 18),
                           Container(
                             height: 50,
                             width: MediaQuery.of(context).size.width,
                             decoration: BoxDecoration(
-                              boxShadow: [
+                              boxShadow: const [
                                 BoxShadow(
                                   color: Colors.grey,
                                   blurRadius: 5,
@@ -173,12 +176,12 @@ class _SignupScreenState extends State<SignupScreen> {
                                 style: GoogleFonts.josefinSans(
                                   fontWeight: FontWeight.w600,
                                   fontSize: 22,
-                                  color: Color(0xFF4B74FF),
+                                  color: const Color(0xFF4B74FF),
                                 ),
                               ),
                             ),
                           ),
-                          SizedBox(height: 18),
+                          const SizedBox(height: 18),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
@@ -194,7 +197,8 @@ class _SignupScreenState extends State<SignupScreen> {
                                   Navigator.pushReplacement(
                                       context,
                                       MaterialPageRoute(
-                                          builder: (context) => LoginScreen()));
+                                          builder: (context) =>
+                                              const LoginScreen()));
                                 },
                                 child: Text(
                                   'Login',
@@ -216,16 +220,14 @@ class _SignupScreenState extends State<SignupScreen> {
             ),
             Column(
               children: [
-                SizedBox(height: 50),
+                const SizedBox(height: 50),
                 Padding(
                   padding:
                       const EdgeInsets.symmetric(horizontal: 42, vertical: 30),
-                  child: Container(
-                    child: Center(
-                      child: Image.asset(
-                        'assets/images/TravelLogo.png',
-                        height: 155,
-                      ),
+                  child: Center(
+                    child: Image.asset(
+                      'assets/images/TravelLogo.png',
+                      height: 155,
                     ),
                   ),
                 ),

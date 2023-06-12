@@ -6,6 +6,8 @@ import 'package:travel_ui/screens/offers_screen.dart';
 
 class ProfileScreen extends StatelessWidget {
   static const String id = 'ProfileScreen()';
+
+  const ProfileScreen({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
@@ -17,7 +19,7 @@ class ProfileScreen extends StatelessWidget {
               Container(
                 width: MediaQuery.of(context).size.width,
                 height: MediaQuery.of(context).size.height / 4.3,
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                   image: DecorationImage(
                       image: AssetImage('assets/images/profile-background.jpg'),
                       fit: BoxFit.cover),
@@ -31,7 +33,7 @@ class ProfileScreen extends StatelessWidget {
                   decoration: BoxDecoration(
                     color: kBackgroundColor,
                     borderRadius: BorderRadius.circular(10),
-                    boxShadow: [
+                    boxShadow: const [
                       BoxShadow(
                         blurRadius: 5,
                         color: kSubtitleColor,
@@ -41,16 +43,16 @@ class ProfileScreen extends StatelessWidget {
                 ),
               ),
               Container(
-                padding: EdgeInsets.symmetric(horizontal: 32),
+                padding: const EdgeInsets.symmetric(horizontal: 32),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    SizedBox(height: 90),
-                    CircleAvatar(
+                    const SizedBox(height: 90),
+                    const CircleAvatar(
                       backgroundImage: AssetImage('assets/images/profile.png'),
                       radius: 50,
                     ),
-                    SizedBox(height: 5),
+                    const SizedBox(height: 5),
                     Padding(
                       padding: const EdgeInsets.only(left: 27),
                       child: Row(
@@ -60,10 +62,10 @@ class ProfileScreen extends StatelessWidget {
                             'Jon Doe',
                             style: kScreenTitleStyle.copyWith(fontSize: 25),
                           ),
-                          SizedBox(width: 15),
+                          const SizedBox(width: 15),
                           InkWell(
                             onTap: () {},
-                            child: Icon(
+                            child: const Icon(
                               FontAwesomeIcons.penToSquare,
                               size: 14,
                             ),
@@ -71,27 +73,27 @@ class ProfileScreen extends StatelessWidget {
                         ],
                       ),
                     ),
-                    SizedBox(height: 3),
+                    const SizedBox(height: 3),
                     Text(
                       'Traveller, Foodie & Artist',
                       style: kServiceSubtitleStyle.copyWith(fontSize: 12),
                     ),
-                    SizedBox(height: 25),
+                    const SizedBox(height: 25),
                     InkWell(
                       onTap: () {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => OfferScreen()));
+                                builder: (context) => const OfferScreen()));
                       },
                       child: Container(
                         height: 60,
                         decoration: BoxDecoration(
-                          boxShadow: [
+                          boxShadow: const [
                             BoxShadow(color: kSubtitleColor, blurRadius: 1),
                           ],
                           borderRadius: BorderRadius.circular(10),
-                          gradient: LinearGradient(
+                          gradient: const LinearGradient(
                             colors: [
                               Color(0xFF46B7FE),
                               Color(0xFF47A6FF),
@@ -105,12 +107,12 @@ class ProfileScreen extends StatelessWidget {
                               horizontal: 18, vertical: 8),
                           child: Row(
                             children: [
-                              Icon(
+                              const Icon(
                                 FontAwesomeIcons.gift,
                                 size: 35,
                                 color: Colors.redAccent,
                               ),
-                              SizedBox(width: 15),
+                              const SizedBox(width: 15),
                               Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 mainAxisAlignment: MainAxisAlignment.center,
@@ -148,7 +150,7 @@ class ProfileScreen extends StatelessWidget {
               decoration: BoxDecoration(
                 color: kBackgroundColor,
                 borderRadius: BorderRadius.circular(10),
-                boxShadow: [
+                boxShadow: const [
                   BoxShadow(
                     blurRadius: 5,
                     color: kSubtitleColor,
@@ -157,10 +159,10 @@ class ProfileScreen extends StatelessWidget {
               ),
               child: Column(
                 children: [
-                  SizedBox(height: 7),
+                  const SizedBox(height: 7),
                   Container(
                     height: 30,
-                    padding: EdgeInsets.symmetric(horizontal: 16),
+                    padding: const EdgeInsets.symmetric(horizontal: 16),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -168,17 +170,17 @@ class ProfileScreen extends StatelessWidget {
                           'Change Password',
                           style: kServiceTitleStyle.copyWith(fontSize: 15),
                         ),
-                        Icon(
+                        const Icon(
                           Icons.chevron_right_rounded,
                           size: 24,
                         ),
                       ],
                     ),
                   ),
-                  Divider(thickness: 1),
+                  const Divider(thickness: 1),
                   Container(
                     height: 30,
-                    padding: EdgeInsets.symmetric(horizontal: 16),
+                    padding: const EdgeInsets.symmetric(horizontal: 16),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -186,17 +188,17 @@ class ProfileScreen extends StatelessWidget {
                           'Credits & Coupons',
                           style: kServiceTitleStyle.copyWith(fontSize: 15),
                         ),
-                        Icon(
+                        const Icon(
                           Icons.chevron_right_rounded,
                           size: 24,
                         ),
                       ],
                     ),
                   ),
-                  Divider(thickness: 1),
+                  const Divider(thickness: 1),
                   Container(
                     height: 30,
-                    padding: EdgeInsets.symmetric(horizontal: 16),
+                    padding: const EdgeInsets.symmetric(horizontal: 16),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -204,17 +206,17 @@ class ProfileScreen extends StatelessWidget {
                           'Invite Friends',
                           style: kServiceTitleStyle.copyWith(fontSize: 15),
                         ),
-                        Icon(
+                        const Icon(
                           Icons.chevron_right_rounded,
                           size: 24,
                         ),
                       ],
                     ),
                   ),
-                  Divider(thickness: 1),
+                  const Divider(thickness: 1),
                   Container(
                     height: 30,
-                    padding: EdgeInsets.symmetric(horizontal: 16),
+                    padding: const EdgeInsets.symmetric(horizontal: 16),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -222,17 +224,17 @@ class ProfileScreen extends StatelessWidget {
                           'Help Center',
                           style: kServiceTitleStyle.copyWith(fontSize: 15),
                         ),
-                        Icon(
+                        const Icon(
                           Icons.chevron_right_rounded,
                           size: 24,
                         ),
                       ],
                     ),
                   ),
-                  Divider(thickness: 1),
+                  const Divider(thickness: 1),
                   Container(
                     height: 30,
-                    padding: EdgeInsets.symmetric(horizontal: 16),
+                    padding: const EdgeInsets.symmetric(horizontal: 16),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -240,17 +242,17 @@ class ProfileScreen extends StatelessWidget {
                           'Payments',
                           style: kServiceTitleStyle.copyWith(fontSize: 15),
                         ),
-                        Icon(
+                        const Icon(
                           Icons.chevron_right_rounded,
                           size: 24,
                         ),
                       ],
                     ),
                   ),
-                  Divider(thickness: 1),
+                  const Divider(thickness: 1),
                   Container(
                     height: 30,
-                    padding: EdgeInsets.symmetric(horizontal: 16),
+                    padding: const EdgeInsets.symmetric(horizontal: 16),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -258,17 +260,17 @@ class ProfileScreen extends StatelessWidget {
                           'Settings',
                           style: kServiceTitleStyle.copyWith(fontSize: 15),
                         ),
-                        Icon(
+                        const Icon(
                           Icons.chevron_right_rounded,
                           size: 24,
                         ),
                       ],
                     ),
                   ),
-                  Divider(thickness: 1),
+                  const Divider(thickness: 1),
                   Container(
                     height: 30,
-                    padding: EdgeInsets.symmetric(horizontal: 16),
+                    padding: const EdgeInsets.symmetric(horizontal: 16),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [

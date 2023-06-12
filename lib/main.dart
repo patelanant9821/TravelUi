@@ -12,10 +12,12 @@ import 'package:travel_ui/screens/welcome_screen.dart';
 import 'screens/home.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -25,16 +27,16 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       initialRoute: WelcomeScreen.id,
       routes: {
-        WelcomeScreen.id: (context) => WelcomeScreen(),
-        LoginScreen.id: (context) => LoginScreen(),
-        SignupScreen.id: (context) => SignupScreen(),
-        Home.id: (context) => Home(),
-        HomePage.id: (context) => HomePage(),
-        OfferScreen.id: (context) => OfferScreen(),
-        ProfileScreen.id: (context) => ProfileScreen(),
-        RecommendedLocations.id: (context) => RecommendedLocations(),
-        SearchLocationScreen.id: (context) => SearchLocationScreen(),
-        WatchListScreen.id: (context) => WatchListScreen(),
+        WelcomeScreen.id: (context) => const WelcomeScreen(),
+        LoginScreen.id: (context) => const LoginScreen(),
+        SignupScreen.id: (context) => const SignupScreen(),
+        Home.id: (context) => const Home(),
+        HomePage.id: (context) => const HomePage(),
+        OfferScreen.id: (context) => const OfferScreen(),
+        ProfileScreen.id: (context) => const ProfileScreen(),
+        RecommendedLocations.id: (context) => const RecommendedLocations(),
+        SearchLocationScreen.id: (context) => const SearchLocationScreen(),
+        WatchListScreen.id: (context) => const WatchListScreen(),
       },
     );
   }

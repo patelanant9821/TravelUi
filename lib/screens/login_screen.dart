@@ -9,11 +9,13 @@ import 'home.dart';
 class LoginScreen extends StatelessWidget {
   static const String id = 'LoginScreen()';
 
+  const LoginScreen({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: SingleChildScrollView(
-        physics: NeverScrollableScrollPhysics(),
+        physics: const NeverScrollableScrollPhysics(),
         child: Stack(
           children: [
             Stack(
@@ -21,7 +23,7 @@ class LoginScreen extends StatelessWidget {
               children: [
                 Container(
                   height: MediaQuery.of(context).size.height,
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     gradient: LinearGradient(
                       begin: Alignment.topRight,
                       end: Alignment.bottomLeft,
@@ -36,7 +38,7 @@ class LoginScreen extends StatelessWidget {
                 Positioned(
                   child: Container(
                     height: MediaQuery.of(context).size.height / 1.4,
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                       boxShadow: [
                         BoxShadow(
                           color: Colors.black12,
@@ -53,13 +55,13 @@ class LoginScreen extends StatelessWidget {
                           horizontal: 28.0, vertical: 16.0),
                       child: Column(
                         children: [
-                          SizedBox(height: 10),
+                          const SizedBox(height: 10),
                           Text(
                             'Login',
                             style: kScreenTitleStyle.copyWith(
                                 fontWeight: FontWeight.w700, fontSize: 36),
                           ),
-                          SizedBox(height: 40),
+                          const SizedBox(height: 40),
                           TextField(
                             style: GoogleFonts.josefinSans(
                               letterSpacing: 1.0,
@@ -72,7 +74,7 @@ class LoginScreen extends StatelessWidget {
                             keyboardType: TextInputType.emailAddress,
                             textInputAction: TextInputAction.next,
                           ),
-                          SizedBox(height: 30),
+                          const SizedBox(height: 30),
                           TextField(
                             style: GoogleFonts.josefinSans(
                               letterSpacing: 1.0,
@@ -86,26 +88,26 @@ class LoginScreen extends StatelessWidget {
                             obscureText: true,
                             autocorrect: false,
                           ),
-                          SizedBox(height: 50),
+                          const SizedBox(height: 50),
                           InkWell(
                             onTap: () {
                               Navigator.pushReplacement(
                                   context,
                                   MaterialPageRoute(
-                                      builder: (context) => Home()));
+                                      builder: (context) => const Home()));
                             },
                             child: Container(
                               height: 50,
                               width: MediaQuery.of(context).size.width,
                               decoration: BoxDecoration(
-                                boxShadow: [
+                                boxShadow: const [
                                   BoxShadow(
                                     color: Colors.grey,
                                     blurRadius: 5,
                                   ),
                                 ],
                                 borderRadius: BorderRadius.circular(30),
-                                gradient: LinearGradient(
+                                gradient: const LinearGradient(
                                   begin: Alignment.topRight,
                                   end: Alignment.bottomLeft,
                                   colors: [
@@ -126,15 +128,15 @@ class LoginScreen extends StatelessWidget {
                               ),
                             ),
                           ),
-                          SizedBox(height: 17),
+                          const SizedBox(height: 17),
                           Text(
                             'Forget your password?',
                             style: kTravelLogPlaceStyle.copyWith(
-                              color: Color(0xFF4B74FF),
+                              color: const Color(0xFF4B74FF),
                               fontSize: 14,
                             ),
                           ),
-                          SizedBox(height: 100),
+                          const SizedBox(height: 100),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
@@ -151,12 +153,12 @@ class LoginScreen extends StatelessWidget {
                                       context,
                                       MaterialPageRoute(
                                           builder: (context) =>
-                                              SignupScreen()));
+                                              const SignupScreen()));
                                 },
                                 child: Text(
                                   'Sign up',
                                   style: kTravelLogPlaceStyle.copyWith(
-                                    color: Color(0xFF4B74FF),
+                                    color: const Color(0xFF4B74FF),
                                     fontSize: 16,
                                     fontWeight: FontWeight.w700,
                                   ),
@@ -173,10 +175,11 @@ class LoginScreen extends StatelessWidget {
             ),
             Column(
               children: [
-                SizedBox(height: 50),
+                const SizedBox(height: 50),
                 Padding(
                   padding:
                       const EdgeInsets.symmetric(horizontal: 42, vertical: 30),
+                  // ignore: avoid_unnecessary_containers
                   child: Container(
                     child: Center(
                       child: Hero(

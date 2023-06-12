@@ -7,12 +7,15 @@ import 'package:travel_ui/screens/home.dart';
 class OfferScreen extends StatelessWidget {
   static const String id = 'OfferScreen()';
 
+  const OfferScreen({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
         child: Column(
           children: [
+            // ignore: sized_box_for_whitespace
             Container(
               height: 55,
               width: MediaQuery.of(context).size.width,
@@ -21,16 +24,18 @@ class OfferScreen extends StatelessWidget {
                 children: [
                   TextButton(
                     onPressed: () {
-                      Navigator.pop(context,
-                          MaterialPageRoute(builder: (context) => Home()));
+                      Navigator.pop(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const Home()));
                     },
-                    child: Icon(
+                    child: const Icon(
                       FontAwesomeIcons.chevronLeft,
                       color: Colors.black,
                       size: 19,
                     ),
                   ),
-                  SizedBox(width: 16),
+                  const SizedBox(width: 16),
                   Text(
                     'Promos',
                     style: kScreenTitleStyle.copyWith(fontSize: 19),
@@ -38,21 +43,23 @@ class OfferScreen extends StatelessWidget {
                 ],
               ),
             ),
-            SizedBox(height: 8),
+            const SizedBox(height: 8),
             Expanded(
               child: ListView.builder(
                 itemCount: carouselsData.length,
                 itemBuilder: (context, index) {
                   return Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 16, vertical: 10),
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: 16, vertical: 10),
                     child: Container(
-                      padding: EdgeInsets.symmetric(horizontal: 8, vertical: 8),
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 8, vertical: 8),
                       width: MediaQuery.of(context).size.width,
                       height: 190,
                       decoration: BoxDecoration(
-                        boxShadow: [
+                        boxShadow: const [
                           BoxShadow(
-                            color: const Color.fromARGB(255, 118, 117, 117),
+                            color: Color.fromARGB(255, 118, 117, 117),
                             offset: Offset(2.5, 1),
                             blurRadius: 5,
                           ),

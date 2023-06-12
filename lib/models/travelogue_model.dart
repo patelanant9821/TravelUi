@@ -14,35 +14,35 @@ List<TravelogueModel> travelogues = traveloguesData
 
 var traveloguesData = [
   {
-    'name': '\"Sundarban\"',
+    'name': '"Sundarban"',
     'content':
         'Hello Guys, Anant here. Pleasure to watch \'Royal Bengal Tigers\'. This is the best time to visit here that is December to February',
     'place': 'River Hooghly, West Bengal',
     'image': 'assets/images/sundarban-westBengal.png',
   },
   {
-    'name': '\"Jaisalmer\"',
+    'name': '"Jaisalmer"',
     'content':
         'Hey everyone, Ahh! "Jaisalmer - The Golden city". Jaisalmer fort is crown of the city. Glad that i visited this place.',
     'place': 'Jaisalmer, Rajasthan',
     'image': 'assets/images/jesalmer-rajasthan.png',
   },
   {
-    'name': '\"Sundarban\"',
+    'name': '"Sundarban"',
     'content':
         'Hello Guys, Anant here. Pleasure to watch \'Royal Bengal Tigers\'. This is the best time to visit here that is December to February',
     'place': 'River Hooghly, West Bengal',
     'image': 'assets/images/sundarban-westBengal.png',
   },
   {
-    'name': '\"Sundarban\"',
+    'name': '"Sundarban"',
     'content':
         'Hello Guys, Anant here. Pleasure to watch \'Royal Bengal Tigers\'. This is the best time to visit here that is December to February',
     'place': 'River Hooghly, West Bengal',
     'image': 'assets/images/sundarban-westBengal.png',
   },
   {
-    'name': '\"Sundarban\"',
+    'name': '"Sundarban"',
     'content':
         'Hello Guys, Anant here. Pleasure to watch \'Royal Bengal Tigers\'. This is the best time to visit here that is December to February',
     'place': 'River Hooghly, West Bengal',
