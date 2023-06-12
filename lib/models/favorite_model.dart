@@ -8,25 +8,25 @@ class FavoriteModel {
   String packageDuration;
 
   FavoriteModel(
-      this.name,
-      this.state,
-      this.image,
-      this.description,
-      this.package,
-      this.bestTimeToVisit,
-      this.packageDuration,
-      );
+    this.name,
+    this.state,
+    this.image,
+    this.description,
+    this.package,
+    this.bestTimeToVisit,
+    this.packageDuration,
+  );
 }
 
 List<FavoriteModel> favorite = favoriteData
     .map((items) => FavoriteModel(
-    items['name'],
-    items['state'],
-    items['image'],
-    items['description'],
-    items['package'],
-    items['bestTimeToVisit'],
-    items['packageDuration']))
+        items['name']!,
+        items['state']!,
+        items['image']!,
+        items['description']!,
+        items['package']!,
+        items['bestTimeToVisit']!,
+        items['packageDuration']!))
     .toList();
 
 var favoriteData = [
@@ -35,7 +35,7 @@ var favoriteData = [
     'state': 'Sikkim',
     'image': 'assets/images/gangtok-sikkim.jpg',
     'description':
-    'Beautiful Location, must visit. Holy place enriched with pure and peaceful environment.',
+        'Beautiful Location, must visit. Holy place enriched with pure and peaceful environment.',
     'package': '₹ 6000',
     'bestTimeToVisit': 'April - June',
     'packageDuration': '3 nights 4 days',

@@ -68,14 +68,13 @@ var kServiceSubtitleStyle = GoogleFonts.roboto(
 const kTextFieldDecoration = InputDecoration(
   border: InputBorder.none,
   hintText: 'Location Search',
-  hintStyle: TextStyle(color: Colors.grey,fontSize: 20),
+  hintStyle: TextStyle(color: Colors.grey, fontSize: 20),
   prefixIcon: Icon(
-    FontAwesomeIcons.search,
+    FontAwesomeIcons.searchengin,
     size: 20,
     color: Colors.grey,
   ),
-  contentPadding:
-  EdgeInsets.symmetric(vertical: 10.0, horizontal: 30.0),
+  contentPadding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 30.0),
 
   // border: OutlineInputBorder(
   //   borderRadius: BorderRadius.all(Radius.circular(32.0)),
@@ -93,10 +92,9 @@ const kTextFieldDecoration = InputDecoration(
 const kLoginTextFieldDecoration = InputDecoration(
   border: InputBorder.none,
   labelText: '',
-  labelStyle: TextStyle(color: Colors.grey,fontSize: 20),
-  hintStyle: TextStyle(color: Colors.grey,fontSize: 15),
-  contentPadding:
-  EdgeInsets.symmetric(vertical: 10.0, horizontal: 30.0),
+  labelStyle: TextStyle(color: Colors.grey, fontSize: 20),
+  hintStyle: TextStyle(color: Colors.grey, fontSize: 15),
+  contentPadding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 30.0),
   // border: OutlineInputBorder(
   //   borderRadius: BorderRadius.all(Radius.circular(32.0)),
   // ),
@@ -113,10 +111,9 @@ const kLoginTextFieldDecoration = InputDecoration(
 const kSignupTextFieldDecoration = InputDecoration(
   border: InputBorder.none,
   labelText: '',
-  labelStyle: TextStyle(color: Colors.white54,fontSize: 20),
-  hintStyle: TextStyle(color: Colors.white54,fontSize: 15),
-  contentPadding:
-  EdgeInsets.symmetric(vertical: 10.0, horizontal: 30.0),
+  labelStyle: TextStyle(color: Colors.white54, fontSize: 20),
+  hintStyle: TextStyle(color: Colors.white54, fontSize: 15),
+  contentPadding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 30.0),
   // border: OutlineInputBorder(
   //   borderRadius: BorderRadius.all(Radius.circular(32.0)),
   // ),

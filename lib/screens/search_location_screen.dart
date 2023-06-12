@@ -1,6 +1,5 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
+
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:travel_ui/constants/color_constants.dart';
 import 'package:travel_ui/constants/style_constant.dart';
@@ -14,7 +13,7 @@ class SearchLocationScreen extends StatefulWidget {
 }
 
 class _SearchLocationScreenState extends State<SearchLocationScreen> {
-  String location;
+  late String location;
 
   @override
   Widget build(BuildContext context) {
@@ -27,8 +26,7 @@ class _SearchLocationScreenState extends State<SearchLocationScreen> {
             decoration: BoxDecoration(
               image: DecorationImage(
                   image: AssetImage('assets/images/profile-background.jpg'),
-                  fit: BoxFit.cover
-              ),
+                  fit: BoxFit.cover),
             ),
           ),
           Padding(
@@ -46,10 +44,7 @@ class _SearchLocationScreenState extends State<SearchLocationScreen> {
                       decoration: BoxDecoration(
                         color: kBackgroundColor,
                         boxShadow: [
-                          BoxShadow(
-                            color: kSubtitleColor,
-                            blurRadius: 7
-                          ),
+                          BoxShadow(color: kSubtitleColor, blurRadius: 7),
                         ],
                         borderRadius: BorderRadius.circular(8),
                       ),
@@ -66,7 +61,8 @@ class _SearchLocationScreenState extends State<SearchLocationScreen> {
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsets.only(left: 16, top: 24, bottom: 12, right: 16),
+                  padding:
+                      EdgeInsets.only(left: 16, top: 24, bottom: 12, right: 16),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -75,12 +71,17 @@ class _SearchLocationScreenState extends State<SearchLocationScreen> {
                         style: kTitleStyle.copyWith(fontSize: 18),
                       ),
                       TextButton(
-                        onPressed: (){
-                          Navigator.push(context, MaterialPageRoute(builder: (context) => RecommendedLocations()));
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) =>
+                                      RecommendedLocations()));
                         },
                         clipBehavior: Clip.antiAlias,
                         style: ButtonStyle(
-                          foregroundColor: MaterialStateProperty.resolveWith((states) => kTitleColor),
+                          foregroundColor: MaterialStateProperty.resolveWith(
+                              (states) => kTitleColor),
                         ),
                         child: Icon(
                           FontAwesomeIcons.arrowRight,
@@ -91,7 +92,6 @@ class _SearchLocationScreenState extends State<SearchLocationScreen> {
                   ),
                 ),
                 Container(
-
                   height: 150,
                   width: MediaQuery.of(context).size.width,
                   child: ListView.builder(

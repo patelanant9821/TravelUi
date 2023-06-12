@@ -9,7 +9,7 @@ class TravelogueModel {
 
 List<TravelogueModel> travelogues = traveloguesData
     .map((item) => TravelogueModel(
-        item['name'], item['content'], item['place'], item['image']))
+        item['name']!, item['content']!, item['place']!, item['image']!))
     .toList();
 
 var traveloguesData = [

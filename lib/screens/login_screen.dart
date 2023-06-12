@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:travel_ui/constants/color_constants.dart';
@@ -89,10 +88,11 @@ class LoginScreen extends StatelessWidget {
                           ),
                           SizedBox(height: 50),
                           InkWell(
-                            onTap: (){
-                              Navigator.pushReplacement(context, MaterialPageRoute(
-                                  builder: (context) =>
-                                      Home()));
+                            onTap: () {
+                              Navigator.pushReplacement(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => Home()));
                             },
                             child: Container(
                               height: 50,

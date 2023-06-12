@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:travel_ui/screens/profile_screen.dart';
@@ -28,8 +27,6 @@ class _HomeState extends State<Home> {
     });
   }
 
-
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -39,7 +36,7 @@ class _HomeState extends State<Home> {
         title: SvgPicture.asset(
           'assets/svg/TravelLogo.svg',
           fit: BoxFit.contain,
-          cacheColorFilter: false,
+          //cacheColorFilter: false,
         ),
         elevation: 0.0,
       ),
@@ -64,25 +61,25 @@ class _HomeState extends State<Home> {
         child: BottomNavigationBar(
           items: <BottomNavigationBarItem>[
             BottomNavigationBarItem(
-              icon: _selectedIndex==0
+              icon: _selectedIndex == 0
                   ? Icon(Icons.home_outlined, color: Colors.blue[900])
                   : Icon(Icons.home_outlined),
               label: 'Home',
             ),
             BottomNavigationBarItem(
-              icon: _selectedIndex==1
+              icon: _selectedIndex == 1
                   ? Icon(Icons.search_sharp, color: Colors.blue[900])
                   : Icon(Icons.search_sharp),
               label: 'Search',
             ),
             BottomNavigationBarItem(
-              icon: _selectedIndex==2
+              icon: _selectedIndex == 2
                   ? Icon(Icons.favorite_border_sharp, color: Colors.blue[900])
                   : Icon(Icons.favorite_border_sharp),
               label: 'Favorite',
             ),
             BottomNavigationBarItem(
-              icon: _selectedIndex==3
+              icon: _selectedIndex == 3
                   ? Icon(Icons.person_outline, color: Colors.blue[900])
                   : Icon(Icons.person_outline),
               label: 'Profile',

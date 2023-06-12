@@ -58,8 +58,10 @@ class _SignupScreenState extends State<SignupScreen> {
                         children: [
                           Text(
                             'Sign up',
-                            style: kScreenTitleStyle.copyWith(color: kBackgroundColor,
-                                fontWeight: FontWeight.w700, fontSize: 36),
+                            style: kScreenTitleStyle.copyWith(
+                                color: kBackgroundColor,
+                                fontWeight: FontWeight.w700,
+                                fontSize: 36),
                           ),
                           SizedBox(height: 30),
                           TextField(
@@ -125,11 +127,12 @@ class _SignupScreenState extends State<SignupScreen> {
                                 activeColor: kBackgroundColor,
                                 focusColor: kBackgroundColor,
                                 hoverColor: kBackgroundColor,
-                                fillColor: MaterialStateProperty.all(kBackgroundColor),
+                                fillColor:
+                                    MaterialStateProperty.all(kBackgroundColor),
                                 value: this.isChecked,
-                                onChanged: (bool value) {
+                                onChanged: (value) {
                                   setState(() {
-                                    this.isChecked = value;
+                                    this.isChecked = value as bool;
                                   });
                                 },
                               ),
@@ -191,8 +194,7 @@ class _SignupScreenState extends State<SignupScreen> {
                                   Navigator.pushReplacement(
                                       context,
                                       MaterialPageRoute(
-                                          builder: (context) =>
-                                              LoginScreen()));
+                                          builder: (context) => LoginScreen()));
                                 },
                                 child: Text(
                                   'Login',
@@ -217,7 +219,7 @@ class _SignupScreenState extends State<SignupScreen> {
                 SizedBox(height: 50),
                 Padding(
                   padding:
-                  const EdgeInsets.symmetric(horizontal: 42, vertical: 30),
+                      const EdgeInsets.symmetric(horizontal: 42, vertical: 30),
                   child: Container(
                     child: Center(
                       child: Image.asset(

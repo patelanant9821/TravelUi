@@ -21,10 +21,8 @@ class OfferScreen extends StatelessWidget {
                 children: [
                   TextButton(
                     onPressed: () {
-                      Navigator.pop(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => Home()));
+                      Navigator.pop(context,
+                          MaterialPageRoute(builder: (context) => Home()));
                     },
                     child: Icon(
                       FontAwesomeIcons.chevronLeft,
@@ -54,8 +52,8 @@ class OfferScreen extends StatelessWidget {
                       decoration: BoxDecoration(
                         boxShadow: [
                           BoxShadow(
-                            color: Colors.grey[600],
-                            offset: Offset(2.5,1),
+                            color: const Color.fromARGB(255, 118, 117, 117),
+                            offset: Offset(2.5, 1),
                             blurRadius: 5,
                           ),
                         ],

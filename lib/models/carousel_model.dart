@@ -3,9 +3,10 @@ class CarouselModel {
   CarouselModel(this.image);
 }
 
-List<CarouselModel> carousels = carouselsData.map((item) => CarouselModel(item['image'])).toList();
+List<CarouselModel> carousels =
+    carouselsData.map((item) => CarouselModel(item['image']!)).toList();
 
 var carouselsData = [
-  {'image' : 'assets/images/flight-offers.png'},
-  {'image' : 'assets/images/hotel-discount.png'},
+  {'image': 'assets/images/flight-offers.png'},
+  {'image': 'assets/images/hotel-discount.png'},
 ];

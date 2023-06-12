@@ -1,5 +1,3 @@
-import 'dart:ui';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:travel_ui/constants/color_constants.dart';
@@ -67,7 +65,7 @@ class ProfileScreen extends StatelessWidget {
                           InkWell(
                             onTap: () {},
                             child: Icon(
-                              FontAwesomeIcons.edit,
+                              FontAwesomeIcons.penToSquare,
                               size: 14,
                             ),
                           ),
@@ -277,7 +275,9 @@ class ProfileScreen extends StatelessWidget {
                       children: [
                         Text(
                           'Logout',
-                          style: kServiceTitleStyle.copyWith(fontSize: 15, color: kTitleColor.withOpacity(0.6)),
+                          style: kServiceTitleStyle.copyWith(
+                              fontSize: 15,
+                              color: kTitleColor.withOpacity(0.6)),
                         ),
                         Icon(
                           Icons.chevron_right_rounded,

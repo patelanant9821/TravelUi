@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:flutter_swiper/flutter_swiper.dart';
 import 'package:travel_ui/constants/color_constants.dart';
 import 'package:travel_ui/constants/style_constant.dart';
 import 'package:travel_ui/models/carousel_model.dart';
 import 'package:travel_ui/models/popular_destination_model.dart';
 import 'package:travel_ui/models/travelogue_model.dart';
 import 'offers_screen.dart';
+import 'package:card_swiper/card_swiper.dart';
 
 class HomePage extends StatefulWidget {
   static const String id = 'HomePage()';
@@ -394,7 +394,9 @@ class _HomePageState extends State<HomePage> {
                           Positioned(
                             child: SvgPicture.asset(
                               'assets/svg/imageTag.svg',
-                              color: kBackgroundColor,
+                              colorFilter: ColorFilter.mode(
+                                  kBackgroundColor, BlendMode.clear),
+                              // color: kBackgroundColor,
                             ),
                             top: 0,
                             right: 0,

@@ -20,13 +20,13 @@ class RecommendedLocationModel {
 
 List<RecommendedLocationModel> recommended = recommendedData
     .map((items) => RecommendedLocationModel(
-        items['name'],
-        items['state'],
-        items['image'],
-        items['description'],
-        items['package'],
-        items['bestTimeToVisit'],
-        items['packageDuration']))
+        items['name']!,
+        items['state']!,
+        items['image']!,
+        items['description']!,
+        items['package']!,
+        items['bestTimeToVisit']!,
+        items['packageDuration']!))
     .toList();
 
 var recommendedData = [
